@@ -11,6 +11,10 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
+import Pizza from './pizza.svg'
+import Icon from './search-icon.svg'
+
+
 
 const Container = styled.div`
 display: flex;
@@ -97,10 +101,10 @@ function App() {
     <Container>
      <Header>
        <AppNamecomponent>
-         <Appicon src="/pizza.svg" alt="img1"/>
+         <Appicon src={Pizza} alt="img1"/>
          Recipe Finder</AppNamecomponent>
        <Searchcomponent>
-         <Searchicon src="/search-icon.svg" alt=" img"/>
+         <Searchicon src={Icon} alt=" img"/>
          <Searchinput placeholder="search recipe" onChange={ onTextchange }/>
        </Searchcomponent>
      </Header>
@@ -109,7 +113,7 @@ function App() {
        
        <Recipecomponent recipeObj= {recipeObj.recipe}/>
 
-      )) : <Placeholder src="/pizza.svg"/>}
+      )) : <Placeholder src={Pizza}/>}
        </Recipelistcontainer> 
     </Container>
   );
